@@ -1,0 +1,28 @@
+.container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 0.5px;
+}
+
+.subcontainer {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    gap: 0.5px;
+    flex: 1;
+}
+
+.tile {
+    flex: 1;
+}
+
+.overlord {
+    display: flex;
+    justify-content: center;
+}
+
+.btn {
+    text-decoration: none;
+    border: none;
+}
