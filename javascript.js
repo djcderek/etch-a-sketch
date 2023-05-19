@@ -2,15 +2,25 @@ const container = document.querySelector('.container')
 container.style.width = '200px';
 container.style.height = '200px';
 
-const bod = document.body;
+//const bod = document.body;
+const largeCont = document.querySelector('.large-container')
 
 const sizeButton = document.createElement('button');
 sizeButton.classList.add('btn');
 sizeButton.textContent = 'Press Me';
-bod.appendChild(sizeButton)
-//overlord.appendChild(sizeButton)
+largeCont.appendChild(sizeButton)
+
+const resetBtn = document.createElement('button');
+resetBtn.classList.add('btn')
+resetBtn.textContent = 'Reset tiles';
+largeCont.appendChild(resetBtn)
 
 drawTiles(10);
+
+resetBtn.addEventListener('click', () => {
+    container.innerHTML = '';
+    drawTiles(10);
+})
 
 sizeButton.addEventListener('click', () => {
     container.innerHTML = ''
