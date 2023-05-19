@@ -24,8 +24,16 @@ resetBtn.addEventListener('click', () => {
 
 sizeButton.addEventListener('click', () => {
     container.innerHTML = ''
-    let tileSize = prompt('Enter a number')
-    drawTiles(tileSize);
+    let tileSize = prompt('Enter a number between 1 and 100')
+    if (isNaN(Number(tileSize))) {
+        alert('Invalid input');
+        drawTiles(10);
+    } else if ((Number(tileSize) < 1) || (Number(tileSize) > 100)) {
+        alert('Invalid input');
+        drawTiles(10);
+    } else {
+        drawTiles(tileSize);
+    }
 })
 
 function drawTiles(tileSize) {
