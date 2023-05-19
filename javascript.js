@@ -1,7 +1,7 @@
 const container = document.querySelector('.container')
 let width = String(Math.round((window.screen.availHeight)/3))+'px'
-container.style.width = width;
-container.style.height = width;
+container.style.width = '200px';
+container.style.height = '200px';
 
 console.log(window.screen.availWidth)
 
